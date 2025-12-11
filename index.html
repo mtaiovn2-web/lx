@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Đang chuyển hướng</title>
+  <script>
+    const links = [
+      'https://docs.google.com/forms/d/e/FORM1/viewform',
+      'https://docs.google.com/forms/d/e/FORM2/viewform',
+      'https://docs.google.com/forms/d/e/FORM3/viewform',
+      'https://docs.google.com/forms/d/e/FORM4/viewform'
+    ];
+
+    function redirectRandom() {
+      const i = Math.floor(Math.random() * links.length);
+      window.location.href = links[i];
+    }
+
+    window.onload = redirectRandom;
+  </script>
+</head>
+<body>
+  <p>Đang chuyển đến biểu mẫu ngẫu nhiên, vui lòng chờ...</p>
+  <p>Nếu không tự chuyển, bấm vào đây:
+    <a href="#" onclick="redirectRandom()">Chuyển ngay</a>
+  </p>
+</body>
+</html>
